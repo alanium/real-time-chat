@@ -12,6 +12,4 @@ ws.on('message', data => {
     console.log(`🤖 Servidor respondió: ${response.user}: ${response.message}`);
 });
 
-ws.on('close', () => {
-    console.log('🔴 Conexión cerrada');
-});
+ws.on('close', () => console.log('🔴 Conexión cerrada'));
