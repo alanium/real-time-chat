@@ -1,9 +1,6 @@
 const ws = new WebSocket('ws://localhost:3000');
 
-ws.onopen = () => {
-    console.log('🟢 Conectado al servidor WebSocket');
-};
-
+ws.onopen = () => console.log('🟢 Conectado al servidor WebSocket');
 ws.onmessage = event => {
     const data = JSON.parse(event.data);
     if (data.type === 'history') {
